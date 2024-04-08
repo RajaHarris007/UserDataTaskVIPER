@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserListViewController" customModule="UserDataTask" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="5yS-Me-xX3" id="8GY-kS-0D9"/>
+                <outlet property="view" destination="ppm-AA-4LD" id="26j-tT-xrt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ppm-AA-4LD">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CiU-Jl-5uU">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oe0-7n-fA6">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="88"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tz-SA-r2N">
+                                    <rect key="frame" x="152" y="57.666666666666664" width="89.333333333333314" height="23.333333333333336"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naS-AV-IUD">
+                                            <rect key="frame" x="0.0" y="0.0" width="89.333333333333329" height="23.333333333333332"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" name="AccentColor"/>
+                            <constraints>
+                                <constraint firstItem="1tz-SA-r2N" firstAttribute="centerX" secondItem="oe0-7n-fA6" secondAttribute="centerX" id="8J1-MM-a0Q"/>
+                                <constraint firstAttribute="bottom" secondItem="1tz-SA-r2N" secondAttribute="bottom" constant="7" id="n5D-X4-feA"/>
+                                <constraint firstAttribute="height" constant="88" id="uLq-wZ-oxT"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5yS-Me-xX3">
+                            <rect key="frame" x="0.0" y="88" width="393" height="689"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="H57-yf-3BO"/>
+                                <outlet property="delegate" destination="-1" id="yej-It-48x"/>
+                            </connections>
+                        </tableView>
+                        <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="If0-iy-eHa">
+                            <rect key="frame" x="20" y="777" width="353" height="45"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPU-zh-mWD">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="45"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfL-jF-fUe" customClass="CustomButton" customModule="UserDataTask" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="0.0" width="313" height="45"/>
+                                            <color key="backgroundColor" name="AccentColor"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Add User"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="vkCornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="addUserAction:" destination="-1" eventType="touchUpInside" id="sGd-0c-iKy"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="qfL-jF-fUe" firstAttribute="centerX" secondItem="YPU-zh-mWD" secondAttribute="centerX" id="35N-L6-6KV"/>
+                                        <constraint firstItem="qfL-jF-fUe" firstAttribute="leading" secondItem="YPU-zh-mWD" secondAttribute="leading" constant="20" id="4Fu-WH-4q1"/>
+                                        <constraint firstAttribute="bottom" secondItem="qfL-jF-fUe" secondAttribute="bottom" id="CAN-Yg-RZ7"/>
+                                        <constraint firstAttribute="trailing" secondItem="qfL-jF-fUe" secondAttribute="trailing" constant="20" id="Prb-jf-kdQ"/>
+                                        <constraint firstItem="qfL-jF-fUe" firstAttribute="top" secondItem="YPU-zh-mWD" secondAttribute="top" id="fRC-eo-npZ"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="YPU-zh-mWD" secondAttribute="bottom" id="Bus-th-xqX"/>
+                                <constraint firstAttribute="height" constant="45" id="pW4-ko-fqm"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="If0-iy-eHa" firstAttribute="top" secondItem="5yS-Me-xX3" secondAttribute="bottom" id="35Q-WZ-VGp"/>
+                        <constraint firstItem="5yS-Me-xX3" firstAttribute="leading" secondItem="CiU-Jl-5uU" secondAttribute="leading" id="4W2-Kj-Ocx"/>
+                        <constraint firstItem="5yS-Me-xX3" firstAttribute="top" secondItem="oe0-7n-fA6" secondAttribute="bottom" id="Ev5-Qd-1FM"/>
+                        <constraint firstItem="oe0-7n-fA6" firstAttribute="top" secondItem="CiU-Jl-5uU" secondAttribute="top" id="Joz-QL-UhT"/>
+                        <constraint firstAttribute="bottom" secondItem="If0-iy-eHa" secondAttribute="bottom" constant="30" id="UEe-zO-RU0"/>
+                        <constraint firstItem="oe0-7n-fA6" firstAttribute="leading" secondItem="CiU-Jl-5uU" secondAttribute="leading" id="eGq-Ee-xc4"/>
+                        <constraint firstAttribute="trailing" secondItem="5yS-Me-xX3" secondAttribute="trailing" id="gcJ-mz-AAo"/>
+                        <constraint firstAttribute="trailing" secondItem="oe0-7n-fA6" secondAttribute="trailing" id="uxS-2e-TkI"/>
+                        <constraint firstItem="If0-iy-eHa" firstAttribute="leading" secondItem="CiU-Jl-5uU" secondAttribute="leading" constant="20" symbolic="YES" id="xCf-es-JOr"/>
+                        <constraint firstAttribute="trailing" secondItem="If0-iy-eHa" secondAttribute="trailing" constant="20" symbolic="YES" id="ygG-BW-Rg1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="sDw-dt-0Fc"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="CiU-Jl-5uU" firstAttribute="top" secondItem="ppm-AA-4LD" secondAttribute="top" id="Bef-CL-JW5"/>
+                <constraint firstAttribute="bottom" secondItem="CiU-Jl-5uU" secondAttribute="bottom" id="LRA-RI-JEc"/>
+                <constraint firstItem="CiU-Jl-5uU" firstAttribute="leading" secondItem="ppm-AA-4LD" secondAttribute="leading" id="OJm-QZ-TP7"/>
+                <constraint firstAttribute="trailing" secondItem="CiU-Jl-5uU" secondAttribute="trailing" id="VJZ-RB-ncI"/>
+            </constraints>
+            <point key="canvasLocation" x="93.89312977099236" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
